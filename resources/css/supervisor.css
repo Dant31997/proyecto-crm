@@ -1,0 +1,220 @@
+body {
+    font-family: 'Dosis', sans-serif;
+    background: linear-gradient(180deg, rgba(75,180,203,1) 0%, rgba(5,108,131,1) 100%);
+    display: block;
+    height: 96.6vh;
+    max-height: 100vh;
+}
+/* CSS de la barra de arriba */
+header{
+    background: #fff;
+    display: flex;
+    width: auto;
+    margin-top: 1%;
+    margin-left: 2%;
+    margin-right: 3%;
+    border-radius: 15px;
+    max-width: 1240px;
+    max-height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    box-shadow: 0 0 5px;
+}
+.container-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.logo-imagen img {
+    max-width: 150px; 
+    height: auto; 
+    display: block;
+}
+/* CSS del contenido */
+main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-left: 2%;
+    margin-right: 3.7%;
+    height: 540px;
+}
+main .izquierda {
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.2%;
+    margin-top: 2%;
+    width: 95%;
+    height: 95%;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 /30%);
+    text-align: center;
+    max-width: 930px;
+    max-height: 540px;
+    align-items: center;
+    box-shadow: 0 0 5px;
+}
+main .derecha{
+    background-color:white;
+    display: flex;
+    margin-left: 1%;
+    margin-top: 2%;
+    width: 95%;
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 /30%);
+    text-align: center;
+    max-height: 540px; 
+    align-items: center;
+    box-shadow: 0 0 5px;
+}
+button {
+    font-size: 13px;
+    color: #0c0c0c;
+    padding: 10px 15px;
+    border-radius: 100px;
+    border: 2px solid #E8DEF8;
+    background: #E8DEF8;
+    box-shadow: 3px 3px #E8DEF8;
+    cursor: pointer;
+    margin: 10px 0;
+  }
+  
+  button:hover {
+    box-shadow: 3px 3px #054a66;
+    transform: translate(3px, 3px);
+  }
+  .button-crear{
+    font-size: 13px;
+    color: #0c0c0c;
+    padding: 10px 15px;
+    border-radius: 100px;
+    border: 2px solid #E8DEF8;
+    background: #E8DEF8;
+    box-shadow: 3px 3px #E8DEF8;
+    cursor: pointer;
+    margin: 15px 0;
+    text-align: center;
+  }
+  
+  .button-crear:hover {
+    box-shadow: 3px 3px #054a66;
+    transform: translate(3px, 3px);
+  }
+  main .crear{
+    display: block;
+    margin: auto;
+    margin-top: 130%;
+    
+  }
+  /* CSS de la tabla */
+  th {
+    text-align: center;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 8px 8px;
+    background: rgb(31, 165, 218);
+    color: white; font-weight: bold;
+    border-radius: 15px; 
+    box-shadow: 0 0 5px;
+}
+
+table {     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+            font-size: 14px;
+            margin-left: 1%;
+            margin-right: 1%;  
+            margin-top: 1%;    
+            flex-grow: 1;
+            flex-basis: 200;
+}
+td {    
+        padding: 8px;
+        background: white;     
+        color: black;
+        border-radius: 10px;
+        border-color: #2a89af;
+        box-shadow: 0 0 5px;
+    }
+tr {
+        text-align: center;
+        
+}
+tr:hover td { 
+    background: #d0dafd; 
+    color: #339; 
+}
+
+.pagination {
+    display: inline-flex;
+text-align: center;
+margin-top: 2%;
+margin-left: 10%;
+align-items: center;
+box-shadow: 0 0 5px;
+border-radius: 5px;
+}
+
+.pagination a {
+display: inline-flex;
+padding: 5px 10px;
+margin-left: 1%;
+text-decoration: none;
+color: #000;
+align-items: center;
+box-shadow: 0 0 5px;
+border-radius: 5px;
+}
+
+.pagination a.active {
+    display: inline-flex;
+background-color: #2a89af;
+color: #E8DEF8;
+border-radius: 5px;
+max-width: 12px;
+align-items: center;
+box-shadow: 0 0 5px;
+}
+
+.tabla1 {
+        margin-top: 7%;
+}
+.dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+    position: fixed;
+    width: 90px;
+    background-color: #E8DEF8;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+    border-radius: 10px;
+    text-align: center;
+  }
+  .dropdown-content a {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+  }
+  .dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color: #00A4BD;
+  }
+  #Cedula{
+    box-shadow: 0 0 4px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  

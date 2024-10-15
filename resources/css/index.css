@@ -1,0 +1,111 @@
+body {
+    font-family: 'Dosis', sans-serif;
+    background: linear-gradient(180deg, rgba(75,180,203,1) 0%, rgba(5,108,131,1) 100%);
+    display: flex;
+    min-height: 97.3vh;
+}
+
+.formulario {
+    background-color:white;
+    margin: auto;
+    width: 80%;
+    max-width: 350px;
+    max-height: 490px;
+    padding: 4em 2em;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 /30%);
+    text-align: center;
+
+}
+.container-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.logo-principal img {
+    max-width: 150px; 
+    height: auto; 
+    display: block;
+}
+.formulario .cotainer{
+    margin-top: 3em;
+    display: grid;
+    gap: 2.5em;
+}
+.formulario .congrup{
+    position: relative;
+    --color:#5757577e;
+}
+.form_input{
+    width: 100%;
+    background-color: none ;
+    color: #706c6c;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    font-family: 'Dosis', sans-serif;
+}
+
+.form_input:focus + .form_label,
+.form_input:not(:placeholder-shown)+ .form_label {
+    transform: translateY(-12px) scale(.8);
+    transform-origin: left top;
+    color: #E8DEF8;
+}
+
+.form_label{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top:0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+}
+.show-password{
+    cursor: pointer;
+}
+.form_submit{
+    background: #E8DEF8;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;   
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.6s ease;
+    cursor: pointer;
+}
+.form_submit[type="submit"]:hover {
+    background-color: #c9a7ff;
+    transform: scale(1.10);
+}
+
+.form_line{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color:#E8DEF8;
+    transform: scale(0);
+    transform: left bottom;
+}
+.form_input:focus ~ .form_line,
+.form_input:not(:placeholder-shown) ~ .form_line {
+    transform: scale(1);
+}
+.recuperar-pass{
+    background:none;
+    border: none;
+    outline: none;
+    color: #5757577e; 
+    transition: transform 0.6s ease;
+    cursor: pointer;
+}
+.recuperar-pass:hover{
+    transform: scale(1.10);
+}
