@@ -13,14 +13,22 @@
     <nav>
         <img src="/proyecto-interfaz/resources/img/icono-removebg-preview.png" alt="Bancapp" class="img2">
         <ul>
-            <li><a href="#dashboard" class="nav-link active" data-section="dashboard">Informacion</a></li>
+            <li><a href="#dashboard" class="nav-link active" data-section="dashboard">Inicio</a></li>
             <li><a href="#contacts" class="nav-link" data-section="contacts">Clientes</a></li>
             <li><a href="#opportunities" class="nav-link" data-section="opportunities">Oportunidades</a></li>
+            <li><a href="#pqr" class="nav-link" data-section="pqr">PQRs</a></li>
         </ul>
     </nav>
     <main>
+        <div class="dropdown2">
+            <button><img src="/proyecto-interfaz/resources/img/icon.png" alt="icon" class="img1"></button>
+            <div class="dropdown2-content">
+            <a href="#perfil" class="nav-link active" data-section="perfil">Perfil</a>
+            <a href="/proyecto-crm/resources/views/index.blade.php">Cerrar sesion</a>
+            </div>
+        </div>
         <section id="dashboard" class="section active">
-            <h2>Informacion</h2>
+            <h2>Inicio</h2>
             <div class="dashboard-cards">
                 <div class="card">
                     <h3>Total Contactos</h3>
@@ -100,6 +108,78 @@
                         <td>Proyecto D</td>
                         <td>$15,000</td>
                         <td>Seguimiento</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="perfil" class="section">
+            <h2>Perfil</h2>
+            <form action="">
+                <div class="cotainer">
+                    <div class="congrup">
+                        <label for="Nombre" class="form_label"><i class="fa-solid fa-user" style="color: #e8def8;"></i> Nombre</label>
+                        <input type="text" id="Nombre" class="form_input" placeholder="Daniel Alejandro Pe;a Estrella " name="Nombre">
+                        <span class="form_line"></span>
+                    </div>
+                    <div class="congrup">
+                        <label for="Cedula" class="form_label"><i class="fa-solid fa-lock" style="color: #e8def8;"></i> Cedula</label>
+                        <input type="text" id="Cedula" class="form_input" placeholder="615848214" name="Cedula">
+                        <span class="form_line"></span>
+                    </div>
+                    <div class="congrup">
+                        <label for="Correo" class="form_label"><i class="fa-solid fa-lock" style="color: #e8def8;"></i> Correo</label>
+                        <input type="text" id="Correo" class="form_input" placeholder="pena.daniel@correounivalle.edu.co" name="Correo">
+                        <span class="form_line"></span>
+                    </div>
+                    <div class="congrup">
+                        <label for="Celular" class="form_label"><i class="fa-solid fa-lock" style="color: #e8def8;"></i> Celular</label>
+                        <input type="text" id="Celular" class="form_input" placeholder=" 3136692136" name="Celular">
+                        <span class="form_line"></span>
+                    </div>   
+                </div>
+            </form>
+        </section>
+
+        <section id="pqr" class="section">
+            <h2>PQRS</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Asunto</th>
+                        <th>Descripcion</th>
+                        <th>Cedula del Usuario</th>
+                        <th>Correo</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>No funciona bien la aplicacion</td>
+                        <td>He intentado ingresar varias veces a la aplicacion y no me lo permite, he intentado recuperar la contrase;a y no me llega el mensaje, ayuda por favor</td>
+                        <td>10654987</td>
+                        <td>rosmira@gmail.com</td>
+                        <td>Resuelto</td>
+                    </tr>
+                    <tr>
+                        <td>Como sacar dinero</td>
+                        <td>He seguido las instrucciones de la aplicacion y no me permite sacar el dinero de la cuenta.</td>
+                        <td>10446571</td>
+                        <td>Casimirobuenavista@gmail.com</td>
+                        <td>En revision</td>
+                    </tr>
+                    <tr>
+                        <td>Gran trabajo</td>
+                        <td>Estoy feliz por haber confiado en ustedes como compa;ia muchas gracias</td>
+                        <td>14565897</td>
+                        <td>pamelaB@gmail.com</td>
+                        <td>Pendiente</td>
+                    </tr>
+                    <tr>
+                        <td>Esto si funciona?</td>
+                        <td>Yo le hundo al boton y esa vaina no va, no hace nada, revisen esa monda que lo hace perder tiempo a uno echeeeee.</td>
+                        <td>16853449</td>
+                        <td>hijodesumama@gmail.com</td>
+                        <td>Pendiente</td>
                     </tr>
                 </tbody>
             </table>
