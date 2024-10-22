@@ -1,0 +1,169 @@
+
+body {
+    font-family: 'Righteous', sans-serif; /* Aplica la fuente Righteous a todo el cuerpo */
+    min-height: 90%;
+}
+html{
+    background: linear-gradient(to top , #2480bd , #59cbff);
+      background-attachment: fixed; /* Fija el fondo al hacer scroll */
+      background-size: cover; 
+}
+.texto{
+   margin-left: 44%;
+}
+.titulo{
+    display: flex;  
+    justify-content: space-between;
+    text-align: center;
+    background-color: white;
+    border-radius: 25px;
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+.opcion{
+    background-color: #E8DEF8;
+    border-radius: 25px;
+    border: none; /* Elimina el borde */
+    outline: none;
+    color: rgb(0, 0, 0); /* Color del texto */
+    padding: 10px 16px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+.hidden {
+    display: none;
+  }
+.opcion:focus{
+    outline: none;
+    box-shadow: none;
+}
+.opcion:hover{
+    border: 1px solid rgb(110, 110, 110);
+    background-color: #f4beff;
+    outline: none;
+    color: white;
+}
+.box{
+    display: flex; /* Usar Flexbox para alinear imagen y input */
+    flex-direction: column; /* Cambiar a columna para que se vean verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    margin-top: 1%; /* Espacio superior para que no choque con el navbar */
+    padding: 5px; /* Espaciado interno */
+    text-align: center;
+    background-color: white;
+    border-radius: 25px;
+    padding-bottom: 30px;
+    max-height: auto;
+    z-index: -2;
+}
+
+.img1{
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+.hamburger {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    color: rgb(0, 0, 0); /* Color del icono */
+    font-size: 24px; /* Tamaño del icono */
+    cursor: pointer; /* Cursor tipo puntero */
+    padding-bottom: 10px; /* Espaciado interno para que sea más fácil de hacer clic */
+    padding-left: 30px;
+    margin-left: 8%;
+    margin-right: auto;
+}
+
+.dropdown {
+    position: relative; /* Para que el contenido desplegable se posicione relativo a este */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.dropdown-toggle {
+    display: flex; /* Para alinear las barras horizontalmente */
+    flex-direction: column; /* Coloca las barras en columna */
+    justify-content: space-between; /* Espacio uniforme entre las barras */
+    width: 30px; /* Ancho del botón */
+    height: 30px; /* Alto del botón */
+}
+
+.bar {
+    width: 100%; /* Ancho completo del contenedor */
+    height: 4px; /* Altura de cada barra */
+    background-color: white; /* Color de las barras */
+    transition: all 0.3s ease; /* Transición suave */
+}
+.dropdown-content {
+    position: fixed; /* Posiciona el contenido de forma fija */
+    top: 0; /* Se asegura de que esté alineado al principio */
+    left: 0; /* Alinea a la izquierda */
+    height: 100%; /* Ocupa toda la altura de la ventana */
+    width: 25%; /* Ocupa una cuarta parte de la pantalla */
+    background-color: white; /* Color de fondo del menú desplegable */
+    border: 1px solid gray; /* Borde del menú desplegable */
+    transform: translateX(-100%); /* Comienza oculto a la izquierda */
+    opacity: 0; /* Oculto por defecto */
+    pointer-events: none; /* Evita que el ratón interactúe cuando está oculto */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transición suave para la animación */
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+    display: flex; /* Usar Flexbox para el contenido */
+    flex-direction: column; /* Coloca los elementos en columna */
+}
+.dropdown-content:hover {
+    cursor: default; /* Cursor por defecto cuando se pasa por encima de la barra */
+}
+.dropdown-button {
+    padding: 10px; /* Espaciado interno de cada botón */
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    text-align: left; /* Alinear texto a la izquierda */
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+    cursor: default; /* Cursor por defecto para los botones */
+}
+.dropdown-button:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el mouse */
+    cursor: pointer; /* Cambia el cursor a puntero al pasar por encima de un botón */
+}
+
+.close-button {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    font-size: 24px; /* Tamaño de la fuente */
+    color: black; /* Color del texto */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin: 10px; /* Margen alrededor del botón */
+    align-self: flex-end; /* Alinea el botón al final del contenedor */
+}
+.dropdown.active .dropdown-content {
+    transform: translateX(0); /* Se mueve a la posición original */
+    opacity: 1; /* Hace visible el contenido */
+    pointer-events: auto; /* Permite la interacción */
+}
+
+.input{
+    border: 0.5px solid gray; /* Borde gris de 0.5px */
+    padding: 8px; /* Espaciado interno para el texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    border-radius: 4px; /* Esquinas redondeadas (opcional) */
+    margin-bottom: 40px; /* Margen inferior para separar del imagen */
+    }
+.img2{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    right: auto;
+    pointer-events: none;
+    z-index: 1;
+}
+h2{
+    position: relative;
+    left: -5px;
+    
+}
+.contenido-forms{
+    z-index: 2;
+    background: transparent;
+}

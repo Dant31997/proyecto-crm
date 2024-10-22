@@ -104,8 +104,9 @@
                             <label for="Cedula" class="form_label"><i class="fa-brands fa-searchengin"></i>Cedula del empleado</label>
                             <input type="text" id="Cedula" class="form_input" placeholder=" " name="Cedula">
                             <span class="form_line"></span>
+                            <button type="button" onclick="buscarEmpleado(); resetearInput();">Buscar</button>
                         </div>
-                        <button type="button" onclick="buscarEmpleado()">Buscar</button>
+                        
                     </div>
                 </form>
             </div>
@@ -151,6 +152,11 @@
             xhr.send("Cedula=" + encodeURIComponent(Cedula));
         }
     </script>
+  <script>
+  function resetearInput() {
+    document.getElementById('Cedula').value = '';
+  }
+</script>
     </main>
 </body>
 </html>

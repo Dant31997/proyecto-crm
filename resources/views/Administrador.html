@@ -1,0 +1,111 @@
+<link rel="stylesheet" href="/proyecto-interfaz/resources/css/Estadodecuenta.css">
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado de cuenta</title>
+</head>
+<body>
+    <header class="titulo">
+        <div class="dropdown">
+            <div class="dropdown-toggle">
+                <button class="hamburger" onclick="toggleDropdown()">☰</button>
+            </div>
+            <div class="dropdown-content">
+                <button class="close-button">✖</button> <!-- Botón de cierre -->
+                <button class="dropdown-button">Opción 1</button>
+                <button class="dropdown-button">Opción 2</button>
+                <button class="dropdown-button">Opción 3</button>
+            </div>
+    </div>
+        <div class="texto">
+            <h2 class="titular">Bancapp</h2>
+            
+        </div>
+        <img src="/proyecto-interfaz/resources/img/icon.png" alt="icon" class="img1">
+    </header>
+<div class="box">
+    
+    <img src="/proyecto-interfaz/resources/img/icono-removebg-preview.png" alt="Bancapp" class="img2">
+    
+    
+    <h3>Estado de Cuenta</h2>
+        <div class="contenido-forms">
+            <div class="formulario">
+                <input type="text" class="input" placeholder="Nombre">
+                <input type="text" class="input" placeholder="Cedula">
+                <input type="text" class="input" placeholder="Numero de Cuenta">
+            </div>
+            <div class="formulario2">
+                <label for="persona">tipo de persona</label>
+                <select name="tipo de cuenta" class="input" id="cuenta">
+                    <option value="-" selected disabled>Elige una opcion</option>
+                    <option value="Natural">Persona Natural</option>
+                    <option value="Juridica">Persona Juridica</option>
+                </select>
+            </div>
+            <div class="formulario3">
+                <label for="cuenta">tipo de cuenta</label>
+                <select name="tipo de persona"  class="input" id="persona">
+                    <option value="-" selected disabled>Elige una opcion</option>
+                    <option value="Natural">Cuenta Corriente</option>
+                    <option value="Juridica">Cuenta de Ahorro</option>
+                </select>
+            </div>
+            <h4>saldo en la cuenta</h4>
+            <input type="text" class="input" placeholder="saldo">
+        </div>
+        <button class="opcion" id="opcion" name="op2">Atrás</button>    
+</div>
+<script>
+    const selects = document.querySelectorAll('select');
+
+// Recorremos cada <select> y añadimos los eventos necesarios
+selects.forEach(select => {
+  const options = select.querySelectorAll('option');
+
+  // Al abrir el select, oculta las opciones deshabilitadas
+  select.addEventListener('focus', () => {
+    options.forEach(option => {
+      if (option.disabled) {
+        option.classList.add('hidden');
+      }
+    });
+  });
+
+  // Al cerrar el select, restaura las opciones ocultas
+  select.addEventListener('blur', () => {
+    options.forEach(option => {
+      option.classList.remove('hidden');
+    });
+  });
+});
+
+const dropdownToggle = document.querySelector('.dropdown-toggle');
+const dropdown = document.querySelector('.dropdown');
+const closeButton = document.querySelector('.close-button');
+
+// Abre y cierra el dropdown al hacer clic en el icono de las barras
+dropdownToggle.addEventListener('click', () => {
+    dropdown.classList.toggle('active');
+});
+
+// Cierra el dropdown al hacer clic en el botón "X"
+closeButton.addEventListener('click', (event) => {
+    dropdown.classList.remove('active');
+    event.stopPropagation(); // Previene el evento de clic de propagarse
+});
+
+// Cierra el dropdown al hacer clic fuera de la pestaña
+document.addEventListener('click', (event) => {
+    if (!dropdown.contains(event.target) && !dropdownToggle.contains(event.target)) {
+        dropdown.classList.remove('active');
+    }
+});
+
+
+    </script>
+</body>
