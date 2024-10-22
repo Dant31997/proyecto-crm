@@ -183,18 +183,18 @@ box-shadow: 0 0 5px;
 .tabla1 {
         margin-top: 7%;
 }
-.dropdown {
+.dropdown2 {
     display: inline-block;
     position: relative;
   }
-  .dropdown-content {
+  .dropdown2-content {
     display: none;
     position: absolute;
     width: 100%;
     overflow: auto;
     box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
   }
-  .dropdown:hover .dropdown-content {
+  .dropdown2:hover .dropdown2-content {
     display: block;
     position: fixed;
     width: 90px;
@@ -203,13 +203,13 @@ box-shadow: 0 0 5px;
     border-radius: 10px;
     text-align: center;
   }
-  .dropdown-content a {
+  .dropdown2-content a {
     display: block;
     color: #000000;
     padding: 5px;
     text-decoration: none;
   }
-  .dropdown-content a:hover {
+  .dropdown2-content a:hover {
     color: #FFFFFF;
     background-color: #00A4BD;
   }
@@ -219,4 +219,92 @@ box-shadow: 0 0 5px;
     text-align: center;
   }
   
-  
+  .hamburger {
+    border: none; /* Sin borde */
+    color: rgb(0, 0, 0); /* Color del icono */
+    font-size: 20px; /* Tamaño del icono */
+    cursor: pointer; /* Cursor tipo puntero */
+    padding-bottom: 10px; /* Espaciado interno para que sea más fácil de hacer clic */
+    padding-left: 15px;
+    margin-left: 8%;
+    margin-right: auto;
+}
+
+.dropdown {
+    position: relative; /* Para que el contenido desplegable se posicione relativo a este */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin-top: -3%;
+}
+@media (max-width: 1000px) {
+  .dropdown {
+    margin-top: -5%;
+  }}
+  @media (max-width: 750px) {
+    .dropdown {
+      margin-top: -10%;
+    }}
+@media (max-width: 500px) {
+  .dropdown {
+    margin-top: -15%;
+  }}
+
+.dropdown-toggle {
+    display: flex; /* Para alinear las barras horizontalmente */
+    flex-direction: column; /* Coloca las barras en columna */
+    justify-content: space-between; /* Espacio uniforme entre las barras */
+    width: 30px; /* Ancho del botón */
+    height: 30px; /* Alto del botón */
+}
+
+.bar {
+    width: 100%; /* Ancho completo del contenedor */
+    height: 4px; /* Altura de cada barra */
+    background-color: white; /* Color de las barras */
+    transition: all 0.3s ease; /* Transición suave */
+}
+.dropdown-content {
+    position: fixed; /* Posiciona el contenido de forma fija */
+    top: 0; /* Se asegura de que esté alineado al principio */
+    left: 0; /* Alinea a la izquierda */
+    height: 100%; /* Ocupa toda la altura de la ventana */
+    width: 25%; /* Ocupa una cuarta parte de la pantalla */
+    background-color: white; /* Color de fondo del menú desplegable */
+    border: 1px solid gray; /* Borde del menú desplegable */
+    transform: translateX(-100%); /* Comienza oculto a la izquierda */
+    opacity: 0; /* Oculto por defecto */
+    pointer-events: none; /* Evita que el ratón interactúe cuando está oculto */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transición suave para la animación */
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+    display: flex; /* Usar Flexbox para el contenido */
+    flex-direction: column; /* Coloca los elementos en columna */
+}
+.dropdown-content:hover {
+    cursor: default; /* Cursor por defecto cuando se pasa por encima de la barra */
+}
+.dropdown-button {
+    padding: 10px; /* Espaciado interno de cada botón */
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    text-align: left; /* Alinear texto a la izquierda */
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+    cursor: default; /* Cursor por defecto para los botones */
+}
+.dropdown-button:hover {
+    background-color: #f0f0f0; /* Color de fondo al pasar el mouse */
+    cursor: pointer; /* Cambia el cursor a puntero al pasar por encima de un botón */
+}
+
+.close-button {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    font-size: 24px; /* Tamaño de la fuente */
+    color: black; /* Color del texto */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin: 10px; /* Margen alrededor del botón */
+    align-self: flex-end; /* Alinea el botón al final del contenedor */
+}
+.dropdown.active .dropdown-content {
+    transform: translateX(0); /* Se mueve a la posición original */
+    opacity: 1; /* Hace visible el contenido */
+    pointer-events: auto; /* Permite la interacción */
+}

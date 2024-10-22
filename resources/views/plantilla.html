@@ -1,0 +1,133 @@
+<link rel="stylesheet" href="/proyecto-crm/resources/css/plantilla.css">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="/proyecto-interfaz/resources/img/icono-removebg-preview.png" alt="Bancapp" class="img2">
+        <ul>
+            <li><a href="#dashboard" class="nav-link active" data-section="dashboard">Informacion</a></li>
+            <li><a href="#contacts" class="nav-link" data-section="contacts">Clientes</a></li>
+            <li><a href="#opportunities" class="nav-link" data-section="opportunities">Oportunidades</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="dashboard" class="section active">
+            <h2>Informacion</h2>
+            <div class="dashboard-cards">
+                <div class="card">
+                    <h3>Total Contactos</h3>
+                    <p>50</p>
+                </div>
+                <div class="card">
+                    <h3>Oportunidades Abiertas</h3>
+                    <p>10</p>
+                </div>
+                <div class="card">
+                    <h3>Valor Total Oportunidades</h3>
+                    <p>$10'000,000</p>
+                </div>
+            </div>
+        </section>
+        <section id="contacts" class="section">
+            <h2>Clientes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Juan Pérez</td>
+                        <td>juan@ejemplo.com</td>
+                        <td>123-456-7890</td>
+                    </tr>
+                    <tr>
+                        <td>María García</td>
+                        <td>maria@ejemplo.com</td>
+                        <td>098-765-4321</td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Rodríguez</td>
+                        <td>carlos@ejemplo.com</td>
+                        <td>456-789-0123</td>
+                    </tr>
+                    <tr>
+                        <td>Ana Martínez</td>
+                        <td>ana@ejemplo.com</td>
+                        <td>789-012-3456</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="opportunities" class="section">
+            <h2>Oportunidades</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Valor</th>
+                        <th>Etapa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Proyecto A</td>
+                        <td>$10,000</td>
+                        <td>Propuesta</td>
+                    </tr>
+                    <tr>
+                        <td>Proyecto B</td>
+                        <td>$25,000</td>
+                        <td>Negociación</td>
+                    </tr>
+                    <tr>
+                        <td>Proyecto C</td>
+                        <td>$50,000</td>
+                        <td>Cierre</td>
+                    </tr>
+                    <tr>
+                        <td>Proyecto D</td>
+                        <td>$15,000</td>
+                        <td>Seguimiento</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('.section');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetSection = this.getAttribute('data-section');
+
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    this.classList.add('active');
+
+                    sections.forEach(section => {
+                        section.classList.remove('active');
+                        if (section.id === targetSection) {
+                            section.classList.add('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

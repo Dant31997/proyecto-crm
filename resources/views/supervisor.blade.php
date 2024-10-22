@@ -12,12 +12,23 @@
 
 <body>
     <header class="contenedor-header">
-        <div class="logo-imagen">
-            <img src="/proyecto-crm/resources/img/pixelcut-export.png" width="50" height="50" alt="Logo de BancApp">
-        </div>
         <div class="dropdown">
+                <div class="dropdown-toggle">
+                    <button class="hamburger" onclick="toggleDropdown()">☰</button>
+                </div>
+                <div class="dropdown-content">
+                    <button class="close-button">✖</button> <!-- Botón de cierre -->
+                    <button class="dropdown-button">Opción 1</button>
+                    <button class="dropdown-button">Opción 2</button>
+                    <button class="dropdown-button">Opción 3</button>
+                </div>
+        </div>
+        <div class="logo-imagen">
+            <h2>Bancapp</h2>
+        </div>
+        <div class="dropdown2">
             <button><i class="fa-solid fa-user" aria-label="Usuario"></i></button>
-            <div class="dropdown-content">
+            <div class="dropdown2-content">
             <a href="https://blog.hubspot.com/">Blog</a>
             <a href="https://academy.hubspot.com/">Academy</a>
             <a href="/proyecto-crm/resources/views/index.blade.php">Cerrar sesion</a>
@@ -157,6 +168,54 @@
     document.getElementById('Cedula').value = '';
   }
 </script>
+<script>
+    const selects = document.querySelectorAll('select');
+
+// Recorremos cada <select> y añadimos los eventos necesarios
+selects.forEach(select => {
+  const options = select.querySelectorAll('option');
+
+  // Al abrir el select, oculta las opciones deshabilitadas
+  select.addEventListener('focus', () => {
+    options.forEach(option => {
+      if (option.disabled) {
+        option.classList.add('hidden');
+      }
+    });
+  });
+
+  // Al cerrar el select, restaura las opciones ocultas
+  select.addEventListener('blur', () => {
+    options.forEach(option => {
+      option.classList.remove('hidden');
+    });
+  });
+});
+
+const dropdownToggle = document.querySelector('.dropdown-toggle');
+const dropdown = document.querySelector('.dropdown');
+const closeButton = document.querySelector('.close-button');
+
+// Abre y cierra el dropdown al hacer clic en el icono de las barras
+dropdownToggle.addEventListener('click', () => {
+    dropdown.classList.toggle('active');
+});
+
+// Cierra el dropdown al hacer clic en el botón "X"
+closeButton.addEventListener('click', (event) => {
+    dropdown.classList.remove('active');
+    event.stopPropagation(); // Previene el evento de clic de propagarse
+});
+
+// Cierra el dropdown al hacer clic fuera de la pestaña
+document.addEventListener('click', (event) => {
+    if (!dropdown.contains(event.target) && !dropdownToggle.contains(event.target)) {
+        dropdown.classList.remove('active');
+    }
+});
+
+
+    </script>
     </main>
 </body>
 </html>
