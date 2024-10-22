@@ -34,7 +34,7 @@ if ($result->num_rows > 0) {
     if ($rol == 'Administrador') {
         header("Location: admin-dashboard.html");
     } elseif ($rol == 'Supervisor'){
-        header("Location: /proyecto-crm/resources/views/supervisor.blade.php");
+        header("Location: /proyecto-crm/resources/views/plantilla.html  ");
     } else {
         header("Location: user-dashboard.html");
     }

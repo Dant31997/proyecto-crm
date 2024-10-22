@@ -1,4 +1,4 @@
-const pass = document.getElementById("contra"),
+const pass = document.getElementById("Contraseña"),
       icon = document.querySelector(".show-password");
 
 icon.addEventListener("click", e => {

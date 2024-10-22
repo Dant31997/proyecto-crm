@@ -39,7 +39,7 @@
             </div>
         </form>
     </div>
-    <script src="/proyecto-interfaz/resources/js/show.js"></script>
+    <script src="/proyecto-crm/resources/js/show.js"></script>
 </body>
 
 </html>
